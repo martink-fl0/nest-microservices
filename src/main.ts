@@ -19,7 +19,7 @@ async function bootstrap() {
     options: { retryAttempts: 5, retryDelay: 3000 },
   });
   await app.listen(3001);
-  
+
   // const app = await NestFactory.create(AppModule);
   // app.connectMicroservice<MicroserviceOptions>({
   //   transport: Transport.TCP,
@@ -28,6 +28,6 @@ async function bootstrap() {
 
   // await app.startAllMicroservices();
   // await app.listen(3001);
-  console.log(`Application is running on: ${await app.getUrl()}`);
+  console.log(`Application is running on PORT: 3001`);
 }
 bootstrap();
