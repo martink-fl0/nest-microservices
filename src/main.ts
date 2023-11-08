@@ -9,6 +9,8 @@ async function bootstrap() {
       port: 3001
     }
   });
+  console.log("Next line: await app.listen();")
   await app.listen();
+  console.log("Logging app after await app.listen();", app)
 }
 bootstrap();
