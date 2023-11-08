@@ -13,6 +13,6 @@ async function bootstrap() {
   });
   console.log("Next line: await app.listen();")
   await app.listen();
-  console.log("Logging app after await app.listen();", app)
+  // console.log("Logging app after await app.listen();", app)
 }
 bootstrap();
