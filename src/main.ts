@@ -10,7 +10,7 @@ async function bootstrap() {
   const healthCheckServer = express();
   healthCheckServer.get('/', (_, res) => {
     console.log("Received a request on '/'");
-    
+
     res.status(200).send('OK');
   });
   healthCheckServer.listen(3000);
@@ -22,10 +22,7 @@ async function bootstrap() {
     }
   });
 
-  await microservice.listen(() => {
-    const port = microservice.get('MicroserviceOptions').options.port;
-    console.log(`Microservice is listening on port ${port}`);
-  });
+  await microservice.listen();
   // console.log("Logging app after await app.listen();", app)
 }
 bootstrap();
